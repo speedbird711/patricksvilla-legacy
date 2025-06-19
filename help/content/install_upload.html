@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Help</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<P align=left><b><IMG height=16 alt=? src="images/help.gif" width=16 align=middle>  SimpleSecure: Server Setup</b></P>
+<p>        
+             
+           
+       <IMG src="images/ss_ftp.gif" align=right border=0> To 
+begin,&nbsp;unzip the SimpleSecure.zip archive using your preferred ZIP
+      
+         compression software.&nbsp; Be sure to preserve the directory 
+structure within the zip file.           
+           
+  </p>
+<P><STRONG>Step One: Check Path To Perl</STRONG></P>
+<P>(This step is required only on *NIX servers)</P>
+<P>The first line of ssecure.pl contains the path to 
+Perl.&nbsp; The default value is:</P>
+<P><FONT face="Courier New">#!/usr/bin/perl</FONT></P>
+<P>If the path to Perl is different on your server, you 
+must edit this line to reflect the correct path.</P>
+<P><STRONG>Step Two: Upload Directory Structure:</STRONG></P>
+<P>The following directory structure is contained in the .zip archive.&nbsp; The 
+directory structure should be preserved while uploading the files to your server 
+via FTP.</P>
+<UL>
+  <LI>cgi-bin 
+  <UL>
+    <LI>ssecure 
+    <UL>
+      <LI>Crypt:&nbsp; <EM>(CPAN Module directory)</EM>
+      <LI>data: <EM>(Contains script configuration data)</EM>
+      <LI>keys: <EM>(GPG/PGP keys are stored here)</EM>
+      <LI>MIME: <EM>(CPAN Module directory)</EM>
+      <LI>temp: <EM>(temp directory for file upload &amp; session 
+      files)</EM>
+      <LI>verysimple:<EM> (Custom module directory)</EM></LI></UL></LI></UL>
+  <LI>help 
+  <UL>
+    <LI>content 
+    <UL>
+      <LI>images</LI></UL></LI></UL></LI></UL>
+<P>Note: If you already have the Perl module MIME::Lite installed on your 
+server, then it is not neccessary to upload the MIME directory.&nbsp; It will 
+not affect anything if you choose&nbsp;upload this version, however.</P>
+<P><STRONG><FONT color=red>ATTENTION: All files should be uploaded to your 
+server in ASCII mode.&nbsp; Many FTP programs will default to BINARY 
+upload.&nbsp; You must upload all files in ASCII mode or the script will fail to 
+run.</FONT></STRONG></P>
+  <P><STRONG> Step Three: Change Permissions</STRONG>&nbsp;          
+            </P>
+  <P>       
+            
+      (This&nbsp;step is usually necessary only&nbsp;on *NIX server.)</P>
+  <P>       
+            
+        Update the following directory permissions:</P>
+<UL>
+  <LI><FONT color=gray>cgi-bin</FONT> 
+  <UL>
+    <LI><FONT color=gray>ssecure </FONT> 
+    <UL>
+      <LI>Crypt = <EM>Read/Execute&nbsp;(chmod 705)</EM>
+      <LI>data =&nbsp;<EM>Read/Execute&nbsp;(chmod 705)</EM>
+      <LI>keys =&nbsp;<EM>Read/Write/Execute (chmod 707)</EM>
+      <LI>MIME =&nbsp;<EM>Read/Execute&nbsp;(chmod 705)</EM>
+      <LI>temp =&nbsp;<EM>Read/Write/Execute (chmod 707)</EM>
+      <LI>verysimple =<EM>&nbsp;Read/Execute&nbsp;(chmod 705)</EM></LI></UL></LI></UL></LI></UL>
+<P>      Additionally, change the following file 
+permissions:</P>
+<ul>
+<LI><FONT color=gray>cgi-bin</FONT>
+  <UL> 
+  
+<LI>ssecure.pl = <EM>Read/Execute&nbsp;(chmod 705)</EM>
+<LI><FONT color=gray>ssecure </FONT>
+  <UL>
+<LI><FONT color=gray>data </FONT>
+<UL>
+  <LI>secure.ar.txt =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>    
+ 
+  <LI>secure.cfg.txt =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>   
+ 
+  <LI>secure.crypt.txt =&nbsp; <EM>Read (chmod 
+        404)</EM>    
+ 
+  <LI>secure.rcp.txt =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>  </LI>
+  </UL> </LI>
+
+<LI><FONT color=gray>keys </FONT>
+<UL>
+  <LI>pubring.gpg =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>    
+ 
+  <LI>pubring.pgp =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>   
+ 
+  <LI>secring.gpg =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>    
+ 
+  <LI>secring.pgp =&nbsp; <EM>Read/Write (chmod 
+        606)</EM>  </LI>
+  </UL> </LI>
+
+</UL></LI></UL></LI>
+  </ul>    
+ 
+  <P><STRONG>SimpleSecure is now installed and ready to be 
+configured...</STRONG>        
+         </P>
+<P>
+
+<hr NOSHADE>
+
+<P></P>
+<P></P>
+
+<P></P>
+<P>© copyright 1997-2004, <a href="http://www.verysimple.com/" target="_blank">verysimple, inc.</a>    </P>
+
+</body>
+
+</html>

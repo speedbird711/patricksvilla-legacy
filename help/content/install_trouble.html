@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Help</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<P align=left><b><IMG height=16 alt=? src="images/help.gif" width=16 align=middle>   SimpleSecure: TroubleShooting</b></P>
+<p>
+<IMG src="images/ss_error.gif" align=right border=0>
+
+<STRONG>SERVER ERROR: Server 500 Error:</STRONG>        
+             
+           
+           
+                 
+               
+           
+  </p>
+<P>A server 500 error means that the script failed to 
+compile correctly.&nbsp; A 500 error basically means "Unknown Error" and so, 
+there are many possible causes.&nbsp; Here are the top causes for a 500 error.</P>
+<OL>
+  <LI>The script or any of it's required modules was 
+  uploaded in binary mode instead of ASCII mode.
+  <LI>The file permission on the script is not set 
+  correctly to allow read/execute.
+  <LI>A required Perl module is missing.
+  <LI>The path to Perl&nbsp;is incorrect&nbsp;on the first line of the 
+  script.</LI></OL>
+<P>The best way to trouble-shoot is to login to the server via SSH and execute 
+the script from the command line.&nbsp; The perl interpreter should give you 
+more details about the error and allow you to fix it.</P>
+<P>So that you don't spend time chasing the wrong problem, below are some things 
+that gererally do NOT cause 500 errors:</P>
+<UL>
+  <LI>Wrong permission on datafiles (the script will detect 
+  and alert you) .
+  <LI>Incorrect admin passwords, cfgIds, etc.</LI></UL>
+<P><STRONG>Script Error: Could not write/open file:</STRONG></P>
+  <P>SimpleSecure has error checking to make sure it can 
+read/write from it's datafiles.&nbsp; If you receive an error about a permission 
+problem, then you must correct it on the server.&nbsp; The script should 
+generally tell you which file it tried to read/write and that should help you to 
+fix the problem.          
+            </P>
+<P><STRONG>PGP/GPG: Encryption Errors:</STRONG>&nbsp;</P>
+<P>The possible causes of GPG/PGP errors are so numerous that it is impossible 
+to get into them here.&nbsp; Generally the encrypted email message will contain 
+some information that could help you to debug the problem.</P>
+<P>If you have a PGP/GPG attachment and it doesn't decrypt sucessfully, try 
+opening it in Notepad.&nbsp;&nbsp;When an encryption error occurs, instead of 
+the expected PGP data, the attachment will actually contain text with error 
+details.</P>    
+ 
+  <P><STRONG>Installation Service:</STRONG>        
+         </P>
+<P>If you are not able to resolve your installation problems, verysimple is 
+pleased&nbsp;to offer a fee-based SimpleSecure encrypted email installation service.&nbsp; We 
+will get your secure email system working on both the client and the server and 
+have you receiving secure messages in one business day.&nbsp; For more details, 
+please <A href="http://www.verysimple.com/">visit us on the web</A>.&nbsp;</P>
+<P>
+
+<hr NOSHADE>
+
+<P></P>
+<P></P>
+
+<P></P>
+<P>© copyright 1997-2004, <a href="http://www.verysimple.com/" target="_blank">verysimple, inc.</a>    </P>
+
+</body>
+
+</html>

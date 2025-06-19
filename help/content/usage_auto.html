@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Help</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<P align=left><b><IMG height=16 alt=? src="images/help.gif" width=16 align=middle> SimpleSecure Usage: Auto Replies</b></P>
+<P>        
+             
+           
+       <IMG src="images/ss_auto_reply.gif" align=right border=0>
+      
+               
+               
+    SimpleSecure 
+allows you to send an automatic reply to your visitor when they submit
+      
+               
+               
+    a form.&nbsp;</P>
+<P>You can specify the contents of the auto-reply in the "Auto-Replies" section 
+of the admin panel.&nbsp; Once you create an auto-reply, you then assign it to a 
+Recipient Record on the Recipient Record page.</P>
+<P>The automatic reply will be sent to the person submitting the form, however 
+you MUST use cfgFrom as the Email field on your form.&nbsp; This is how 
+SimpleSecure knows where to send the automatic reply.</P>
+<P>The automatic message text can be any plain text message that you like.&nbsp; 
+You can additionally specify fields from your form by surrounding them with 
+brackets like so:&nbsp; {FieldName}.&nbsp; Any field on your form can be used 
+in, allowing you to customize the message.</P>
+<P>As an example, your auto-reply message could look like this:</P>
+<P><FONT face="Courier New">Dear {FirstName} {LastName}<BR>Thank you for your 
+interest in {ProductName}.<BR>Sincerely,<BR>The Managment</FONT></P>
+<P>Assuming the fields FirstName, LastName and ProductName appear on your form, 
+those values will be used in the auto-reply.</P>
+<P><STRONG>  AutoReply Fields:</STRONG></P>
+<P>      
+          
+            
+        The following fields are available for each&nbsp;Auto-Reply Record:</P>
+
+<P>
+<TABLE cellSpacing=1 cellPadding=1 border=1>
+  
+  <TR bgcolor="#dddddd">
+    <TD>Setting</TD>
+    <TD>Description</TD></TR>
+  <TR>
+    <TD>Id</TD>
+    <TD>        
+             This value is incremented 
+    automatically.</TD></TR>
+  <TR>
+    <TD>EmailFormat </TD>
+    <TD> Format of the message (Text or HTML)&nbsp; </TD></TR>
+  <TR>
+    <TD>FromEmail </TD>
+    <TD>Email from which the auto-reply will be sent. </TD></TR>
+  <TR>
+    <TD>Subject </TD>
+    <TD>           
+         The subject of the auto-reply message.</TD></TR>
+  <TR>
+    <TD>Message </TD>
+    <TD>       The contents of the 
+      auto-reply message.</TD></TR></TABLE></P>
+<P>
+
+<hr NOSHADE>
+
+<P></P>
+
+<P></P>
+<P></P>
+
+<P></P>
+<P>© copyright 1997-2004, <a href="http://www.verysimple.com/" target="_blank">verysimple, inc.</a>    </P>
+
+</body>
+
+</html>

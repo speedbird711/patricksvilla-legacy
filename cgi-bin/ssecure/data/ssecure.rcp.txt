@@ -1,0 +1,2 @@
+ID	FormName	EncryptMethod	EncryptKey	Recipients	AttNameLookup	RequireSSL	DefaultFrom	DefaultSubject	DefaultRedirectUrl	DefaultEmailFormat	HtmlTableStyle	AutoReplyId
+1	Test Form	NONE		dev@null.zzz		0	dev@null.zzz	Test Form		HTML	TABLE {BACKGROUND-COLOR: #eeeeee; BORDER: none}<CR><LF>TH {font-family: arial; font-size:10pt;BORDER: 1px solid; BACKGROUND-COLOR: #dddddd}<CR><LF>TD {font-family: arial; font-size:10pt;BORDER: 1px solid; BACKGROUND-COLOR: #ffffff}	

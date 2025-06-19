@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Help</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<P align=left>
+
+
+
+<b>
+<IMG height=16 alt=? src="images/help.gif" width=16 align=middle>   SimpleSecure: Testing</b></P>
+
+
+<p>        
+<IMG src="images/ss_recipients_detail.gif" align=right border=0>             
+           
+           
+         To 
+test&nbsp;that SimpleSecure is working,             
+           
+           
+         you need to create a recipient record and 
+then send&nbsp;yourself a test message.&nbsp;           
+           
+  </p>
+<P><EM>For full details on Recipient Records and&nbsp;how&nbsp;they work, refer 
+to the usage instructions.</EM></P>
+<P><STRONG>Step One: Edit The Test Recipient</STRONG></P>
+<P>Edit the "Test Form" recipient record.&nbsp; Scroll down 
+to the "Recipients" field and replace the dummy email address with your own real address.</P>
+<P>In the "From" field, replace the dummy address with the address of your 
+choice.</P>
+<P>Click "Update" to update the recipient record.&nbsp; Now, any form with 
+cfgId=1 will be sent to you.</P>
+<P><STRONG>Step Two: Submit a Test Form</STRONG></P>
+<P> The fastest way to test SimpleSecure without creating a dummy form is 
+to manually enter some test data in the brower Address Bar.&nbsp; Anything 
+that includes cfgId=1 in the querystring will work.&nbsp; The following is a 
+recommendation:</P>
+<P><A 
+href="/cgi-bin/ssecure/ssecure.pl?cfgId=1&amp;Message=Test+Message" >http://www.YOURDOMAIN.com/cgi-bin/ssecure/ssecure.pl?cfgId=1&amp;Message=Test+Message</A></P>
+<P>If everything is working correctly, you should see the 
+message "Thank you.&nbsp; Your information has been submitted."
+Check your email at this time.&nbsp; You should receive a message from the 
+server.</P>
+<P>You may also use a test form like the one below.&nbsp; (you will probably 
+need to update the action tag to point to the correct location on your 
+server.)</P>
+
+<form action="/cgi-bin/ssecure/ssecure.pl" method="post" enctype="multipart/form-data" id=form1 name=form1>
+<input type="hidden" name="cfgId" value="1">
+<table border="1" cellspacing="1">
+<tr><td>Name</td><td><input name="Name" ></td></tr>
+<tr><td>Email</td><td><input name="cfgFrom" ></td></tr>
+<tr><td>Resume</td><td><input type="file" name="Resume"></td></tr>
+</table>
+<p><input type="submit" value="Test Form"></p>
+</form>
+
+<P>NOTE: Many spam filters will intercept automated email messages.&nbsp; 
+Because all formmail messages are, by their nature, an automated message, your 
+spam filter may block the message.&nbsp; If you do not receive the SimpleSecure 
+test message within a few moments, check that it did not get filtered.&nbsp; To 
+workaround this problem, you may need to specify the "From" address of the 
+recipient record as an email address that is on your spam filter whitelist.</P>    
+ 
+  <P><STRONG>Refer to the 
+troubleshooting page if you have any problems with the 
+install...</STRONG>        
+         </P>
+<P>
+
+<hr NOSHADE>
+
+<P></P>
+<P></P>
+
+<P></P>
+<P>© copyright 1997-2004, <a href="http://www.verysimple.com/" target="_blank">verysimple, inc.</a>    </P>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Help</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+<p>
+
+
+
+<b><IMG height=16 alt=? src="images/help.gif" width=16 align=middle>   SimpleSecure: Configuration</b></p>
+<p>        
+             
+  <IMG src="images/ss_settings_general.gif" align=right border=0>
+         
+           
+         SimpleSecure includes a        
+             
+           
+           
+         web-based administration panel that allows you to control 
+all of the runtime settings.           
+           
+  </p>
+<P>To open the administration panel, direct&nbsp;your browser to:</P>
+<P><A 
+href="https://www.YOURDOMAIN.com/cgi-bin/ssecure/ssecure.pl" >https://www.YOURDOMAIN.com/cgi-bin/ssecure/ssecure.pl</A></P>
+<P>The default login information is:</P>
+<P>Username = admin<BR>Password =   admin</P>
+<P>
+
+<STRONG>Step One: Change The Admin Password</STRONG></P>
+<P>         
+  For security reasons, it is recommeded 
+that you first change the administrator password.&nbsp;</P>
+<P>To change the password, click on the "System Settings" navigation link.&nbsp; The "General" 
+tab of the System Settings page contains the admin username/password&nbsp; (see 
+screenshot).&nbsp; You should update this to a username/password of your 
+choice.&nbsp; </P>
+<P><STRONG><FONT color=red>ATTENTION: It is not recommeded to use the same 
+password for SimpleSecure&nbsp;that you use for your FTP or Host account.&nbsp; 
+This is a poor security practice!</FONT></STRONG></P>
+<P><STRONG>Step Two: Specify the Email Method</STRONG></P>
+<P>The "Email" tab on the System Settings page is where you 
+must specify the method that SimpleSecure will use to send email messages.&nbsp; 
+The two supported methods are SENDMAIL and SMTP.&nbsp; If you choose Sendmail, 
+then you must also enter the path to sendmail on your server (ex 
+"/usr/bin/sendmail").&nbsp; If you choose SMTP, then you must also enter the 
+address of the SMTP server (ex "localhost" or "smtp.mydomain.com").</P>
+<br clear="all">
+
+<P>
+
+<IMG src="images/ss_settings_encrypt.gif" align=right border=0>
+
+<STRONG>Step Three: Configure GPG/PGP Path:</STRONG></P>
+<P>(This step is only necessary if you plan to use the encryption features of 
+SimpleSecure)</P>
+<P>The "Encrypting Settings" tab of the System Settings page contains fields for PGP and 
+GPG&nbsp; (see screenshot).</P>
+<P>GPG &amp; PGP Executable paths should be something like "/usr/bin/pgp" or 
+"/usr/bin/gpg".&nbsp; If your site is hosted&nbsp;on a Windows server, The path 
+may be something like "C:/Program Files/PGP/pgp.exe"&nbsp; (In the case of 
+Windows servers, leave the quotes around the path).</P>
+<P>The Keyring path can be configured in two ways.</P>
+<P>A. (recommended).&nbsp; Specify the full path to th e ~/cgi-bin/ssecure/keys 
+directory.&nbsp; (for example 
+"/usr/www/public_html/myaccount/cgi-bin/ssecure/keys")&nbsp; Use the same value 
+for both GPG and PGP keyring path.</P>
+<P>B. (advanced).&nbsp; If you already have a location where you store GPG/PGP 
+keyrings, you may specify the full path here.&nbsp; (for example 
+"/usr/home/myaccount/.pgp").&nbsp; If you decide to configure the path this way, 
+you must also allow world-read access to your keyring folder.</P>
+<P><STRONG>SimpleSecure is now configured and ready to test...</STRONG></P>
+
+<br clear="all">
+
+<P>
+
+<hr NOSHADE>
+</P>
+<P></P>
+
+<P></P>
+<P></P>
+
+<P></P>
+<P>© copyright 1997-2004, <a href="http://www.verysimple.com/" target="_blank">verysimple, inc.</a>    </P>
+
+</body>
+
+</html>

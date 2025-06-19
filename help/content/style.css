@@ -1,0 +1,27 @@
+BODY, TD, P, TH, A, INPUT, TEXTAREA, SELECT
+{
+    FONT-SIZE: 9pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+}
+
+A:link
+{
+    COLOR: blue;
+    TEXT-DECORATION: none;
+}
+A:visited
+{
+    COLOR: blue;
+    TEXT-DECORATION: none;
+}
+A:active
+{
+    COLOR: blue;
+}
+A:hover
+{
+    COLOR: blue;
+    TEXT-DECORATION: underline;
+}
+

@@ -1,0 +1,2 @@
+ID	Title	EmailFormat	FromEmail	Subject	Message
+1	Test Auto-Reply	TEXT	dev@null.zzz	Test Auto-Reply	This message will be sent to {cfgFrom}

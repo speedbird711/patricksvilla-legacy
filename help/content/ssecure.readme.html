@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=unicode">
+<META content="MSHTML 6.00.2800.1226" name=GENERATOR>
+<TITLE>SimpleSecure 3.0 README</TITLE>
+</HEAD>
+
+<style>
+.header {background-color: #eeeeee; font-weight: bold; font-size: 12pt; color: blue;}
+.bold {font-weight: bold;}
+body {font-family: arial; font-size: 10pt;}
+</style>
+
+<BODY>
+
+<div class="header">SimpleSecure 3.0 README</div>
+
+<P class="bold">
+<IMG alt=SimpleSecure src="images/simplesecure.gif" align=right border=0 width="135" height="150" >
+description</P>
+
+<p title="SimpleSecure 3.0 README">SimpleSecure is an 
+advanced form processing script written in Perl to run on Windows and UNIX 
+servers.&nbsp; SimpleSecure supports an unlimited number of forms (within the limits of the 
+server) with no limitation as to the fields or types of information 
+you are collecting.&nbsp; originally based on Matt Wright's FormMail script, SimpleSecure 3.0 has been written from
+the ground up with security and flexibility in mind.</p>
+<P>     
+            
+        
+ SimpleSecure supports&nbsp;encrypted messages using PGP, GPG, RC4 or JMH.&nbsp; 
+Perl developers have the ability to add additional encryption methods.&nbsp; messages 
+may also be sent in plain text,&nbsp;making&nbsp;SimpleSecure ae easy,&nbsp;practical solution for 
+non-secure form processing needs as well.</P>
+<P>     
+            
+        
+          
+  SimpleSecure supports file uploads and will include them in 
+the email as an attachment.&nbsp; The number of attachments per message&nbsp;is 
+limited only by the server capabilities.</P>
+<P>    SimpleSecure supports Sendmail and SMTP for 
+email transmission, making it suitable for various types of server situations.</P>
+
+
+
+<P class="bold">installation instructions</P>
+
+<p>IMPORTANT! all files (except the .gif files) must be uploaded in ASCII mode.  most 
+FTP clients are set to use "Auto" mode by default and 
+will not upload the files correctly.  Uploading in BINARY
+mode will cause the application to work incorrectly or
+not at all.  You should manually specify ASCII mode on
+your FTP client.</p>
+<OL>
+  <LI>download and unzip the distribution file.&nbsp; if you 
+  are on a UNIX server only, open ssecure.pl and verify that the top line is 
+  the correct&nbsp;path&nbsp;for Perl.&nbsp; the default setting is /usr/local/bin/perl&nbsp; change 
+  this only if neccessary.&nbsp; "which perl" at the shell prompt will tell you 
+  the proper location of perl. 
+  <LI>upload all files from your local computer&nbsp;to your web server.&nbsp; be 
+  sure to use ASCII mode for all files (except the .gif files)&nbsp;and preserve the 
+  directory structure.&nbsp; the directory ssecure should be uploaded to your 
+  html&nbsp;root directory and the files inside cgi-bin should be uploaded to your cgi-bin 
+  directory. 
+  <LI>Change the file permissions:</LI>
+  <OL>
+    <LI>For UNIX Servers, use either the chmod command at the shell prompt, or 
+    use your FTP software to execute the chmod command (ex. "chmod 606 
+    filename.txt").&nbsp; Using WS_FTP, this is done by right-clicking on the 
+    file and selecting "chmod" from the pop-up menu.</LI>
+    <UL>
+    <LI>cgi-bin/ssecure.pl = 705&nbsp; (rwx---r-x) 
+    <LI>cgi-bin/data/* = 606 (rw----rw-)&nbsp; (* 
+      indicates all files in  this directory) 
+    <LI>cgi-bin/temp/ = 707 (rwx---rwx)</LI></UL>
+    <LI>Windows Users - file permissions may not apply on your server.&nbsp; If 
+    you have access to the windows operating system, you can change the NTFS 
+    permissions through windows explorer.&nbsp; IIS also has it's own set of 
+    permissions.&nbsp; If you have a web-based control panel, refer to it's 
+    documentation or help files for changing permissions.&nbsp; The web server 
+    account needs to have the following permissions:</LI>
+    <UL>
+      <LI>cgi-bin/ssecure.pl = 705&nbsp; (Read/Execute) 
+      <LI>cgi-bin/data/* = 606 (Read/Write)&nbsp;&nbsp; (* indicates all files 
+      in this directory)
+      <LI>cgi-bin/temp/ = 707 (Read/Write/Execute)</LI></UL></OL>
+  <LI>open your browser to&nbsp;/cgi-bin/ssecure.pl if 
+  installation was successful, you should be greeted with a login screen.&nbsp; 
+  enter "admin" for the username and "admin" for the password. 
+  <LI>if all file permissions are correct, you should see the main configuration 
+  screen.&nbsp; proceed to useage instructions.</LI></OL>
+<P><STRONG>the general idea</STRONG>:</P>
+<P>the general idea is that you create an html form with the action property set 
+to&nbsp;ssecure.pl.&nbsp; your user fills out the information on this form and 
+clicks the submit button.&nbsp; their responses are processed by 
+ssecure.pl&nbsp;and sent to you as an email message.&nbsp; SimpleSecure doesn't 
+particularly care what fields are on your form.&nbsp; it simply processes 
+whatever information is received and converts it to an email message.&nbsp; the 
+only exception are fields that begin with "cfg"&nbsp; any fields that begins 
+with "cfg" is considered a configuration variable and is not included in the 
+email message.</P>
+<P><STRONG>how SimpleSecure differs from other form 
+processors</STRONG>             
+             
+             
+            
+              
+            
+             
+            
+         
+</P>
+<P>old form processors (such has FormMail) require a hidden field to specify the 
+recipient of the email message, as well as other settings, such as subject, 
+email format, etc.&nbsp; this is a convenient approach, as you can support any 
+form with any recipient and no configuration of the script is required.&nbsp; 
+the problem with this system is that anyone can create a form with any 
+recipient, allowing just about anyone to "hijack" the usage of your FormMail 
+script.&nbsp; also, the email address to which the message is being sent is 
+easily viewable in the source of the HTML.&nbsp; email harvesters aside, it 
+may&nbsp;be undesireable&nbsp;to have the email address easily available to 
+everyone.</P>
+<P>newer and more secure scripts have been created to address this issue, 
+however many require actually editing the script to add or change the email 
+recipients.&nbsp; some scripts allow you to designate a list of "ok" email 
+recipients, while others have you create configuration files for each form.</P>
+<P>the SimpleSecure approach is to create a "recipient" of one or more email 
+addresses.&nbsp; each recipient&nbsp;record is&nbsp;assigned a 
+unique&nbsp;ID.&nbsp; on the html form, instead of specifying your email 
+address, you merely specify the ID number in a hidden form 
+field.&nbsp;&nbsp;Your email address is not required in the source, nor can it 
+be changed through a hidden form field.&nbsp; settings such as message format, 
+subject and redirect page can also be specified through the administration 
+panel, so you do not need to include a bunch of hidden variables on every 
+form.&nbsp; however, you can override the non-security-related settings with 
+hidden fields if you choose.&nbsp; in this way one "recipient" record can 
+support any number of forms.</P>
+<P>recipient records&nbsp;are added and managed&nbsp;through the web-based 
+administration panel.&nbsp; only those with the&nbsp;administrator 
+username/password&nbsp;can access the administration panel.&nbsp; in addition to 
+all of the typical form processor settings, SimpleSecure also supports various 
+methods of encryption.&nbsp; message encryption settings can also be controlled 
+through the admin panel.</P>
+<P><STRONG>setup &amp; administration</STRONG></P>
+<P>
+<IMG alt=SimpleSecure src="images/screenshot.simplesecure.gif" align=right border=0 width="350" height="331" >
+once you have installed SimpleSecure, you should direct your browser to the 
+location of ssecure.pl on your server.&nbsp; you will be presented with the 
+login screen.&nbsp; if this is your first time logging in, the default 
+username/password is admin/admin.&nbsp; the first thing you should do is to 
+change this password.</P>
+<P>There are Four main links at the top of the administration section: 
+Recipients, System Settings, System Information and Logout.&nbsp; The System 
+Settings link is the primary one of interest for setup and administration.&nbsp; 
+Recipients are discussed in the usage section below.&nbsp; System Information is 
+an informational page only and logout is self-explainitory.</P>
+<P>Clicking on the System Settings link brings up several configuration 
+settings.&nbsp; These control the operation of the script.&nbsp; If you have 
+followed all of the instructions correctly, the only screen that you absolutely 
+have to check is the Email screen.</P>
+<UL>
+  <LI><STRONG>General:</STRONG> This is 
+  where you specify the admin username/password as well as the temporary 
+  directory that SimpleSubmit can use for writing temporary files. 
+  <LI><STRONG>Email:</STRONG> This 
+  screen allows you to specify a path to the recipients database (not 
+  recommended to change) as well as the server settings for sending email.&nbsp; 
+  At this screen you should specify if SMTP or Sendmail is to be used, and the 
+  server or file path that is required. 
+  <LI><STRONG>Ecryption Settings:</STRONG> This screen is where you specify the paths to PGP, GPG 
+  executables as well as a URL for&nbsp;your JMH Web Services. 
+  <LI><STRONG>Display:</STRONG> This 
+  controls the design style of SimpleSecure.&nbsp; You can edit the CSS code as 
+  required. 
+  <LI><STRONG>Defaults:</STRONG> This page allows you to restore the default 
+  settings, or redefine the default settings.</LI></UL>
+<P><STRONG>form processing</STRONG></P>
+<P>
+<IMG alt=SimpleSecure src="images/simplesecure.example.gif" align=right border=1 width="265" height="163" >
+the first step in using SimpleSecure is to login to the administration panel 
+and create a new "recipient" record.&nbsp; the recipient detail screen several 
+fields, but most are quite simple and each has some brief explaination 
+text.&nbsp; once you create&nbsp;your new recipient, you will be presented 
+with&nbsp;sample html code that can be used as a starting point for your 
+form.&nbsp; Although extremely simple, this html&nbsp;contains&nbsp;the basic 
+code needed for all forms.&nbsp; notice, in particular, the hidden variable 
+cfgId, which specifies the recipient record to be used.</P>
+<P>your form can contain as many additional fields as you like.&nbsp; any field 
+that does not begin with "cfg" will be processed by ssecure.pl and included in 
+the email message.&nbsp; text boxes, text areas, dropdown boxes, checkboxes, 
+radion buttons, etc, can all be used on your form.&nbsp; The presentation of the 
+email message can be controlled by simply naming your form fields 
+appropriately.&nbsp; your form can also contain file upload fields.&nbsp; file 
+uploads will be processed by ssecure.pl and&nbsp;included in the email message 
+as an attachment.&nbsp; if you have an upload field on your form, however, it is 
+required that the form tag&nbsp;include the setting 
+enctype="multipart/form-data"&nbsp; if you have forgotten this setting, only the 
+filename (not the actual file contents) will be processed and sent in the email 
+message.</P>
+
+
+
+
+<P class="bold">version history</P>
+
+<UL>
+  <LI>3.00 09/20/2003: renamed to SimpleSecure Pro.&nbsp; 
+  Added support for HTML messages.&nbsp; Fixed GPG encryption bugs.&nbsp; Better 
+  error trapping and reporting.&nbsp; Updated verysimple::Config to version 
+  1.12.&nbsp; Renamed "Form Settings" to "Recipients" and added several form 
+  paramters. 
+  <LI>2.220 09/08/2003: updated to read encrytion options 
+  from .crypt file instead of hard-codeing into script 
+  <LI>2.210 09/07/2003: updated Crypt::PGPSimple to 0.14 to 
+  support GPG 
+  <LI>2.201 08/30/2003: updated verysimple::Email to 2.200 
+  to deal with multiple file attachment loop of death. Changed Title output. 
+  Moved temp directory to separate for security issues change tempfile name to 
+  include process id to avoid conficts 
+  <LI>2.200 08/29/2003: Added File Upload Feature &amp; 
+  ThankYou Message if there is no Redirect Page 
+  <LI>2.001 Complete re-write.&nbsp; Released privately as 'Formtronic'</LI></UL>
+
+<P>&nbsp;</P>
+
+</BODY></HTML>

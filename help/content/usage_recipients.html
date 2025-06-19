@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Application Help</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<P align=left><b><IMG height=16 alt=? src="images/help.gif" width=16 align=middle> SimpleSecure Usage: Recipient Records</b></P>
+<P>        
+             
+           
+       <IMG src="images/ss_recipients.gif" align=right border=0>
+      
+         Typical form processors allow you to 
+specify the email recipient as a hidden variable in the form, or else you must 
+configure recipient in the script itself.</P>
+<P>SimpleSecure uses a slightly different 
+approach&nbsp;that allows for&nbsp;both flexibility&nbsp;and security.&nbsp; 
+When you create a new HTML form, you also create a 
+corresponding "Recipient" Record for that form.&nbsp; The Recipient Record allows you 
+to specify to whom the message will be sent, encryption settings, etc.</P>
+<P>On your HTML form, you include a hidden variable with name="cfgId".&nbsp; The 
+value refers to the Recipient Record Id.&nbsp; When SimpleSecure processes the 
+form, it will use the settings specified for the provided Recipient Record.</P>
+<P>One Recipient Record can support an unlimited number of 
+HTML forms, so long as the intended receiver of the formmail message is the 
+same.&nbsp; You need an additional Recipient Record for each actual person/email to which a 
+form will be sent.</P>
+<P>For Single-Site installation, this means that you will probably only need to 
+configure one (1) recipient record.&nbsp; If you are hosting multiple sites, or 
+providing secure form processing for various people, you simply create a 
+Recipient Record for each client.&nbsp; You provide that client with thier 
+Recipient Record ID.&nbsp; Then, they may create as many forms as they like, so 
+long as they use the correct cfgId on their form.</P>
+<P><STRONG>Recipient Record &amp; Form&nbsp;Settings:</STRONG></P>
+<P>The following fields are available for 
+each&nbsp;Recipient Record &amp; Form.&nbsp; Those setting that have an HTML 
+Fieldname can be specified on the HTML form itself.&nbsp; The default setting 
+for the Recipient Record will be used unless an override setting is specified on the form.</P>
+<P>Any HTML form field that begins with the letters 'cfg' 
+will be considered a configuration setting and will not be included in the email message.</P>
+
+<br clear="all">
+
+<P>
+<TABLE cellSpacing=1 cellPadding=1 border=1>
+  
+  <TR bgcolor="#dddddd">
+    <TD><STRONG>Setting</STRONG></TD>
+    <TD><STRONG>HTML FieldName</STRONG> </TD>
+    <TD><STRONG>Description</STRONG></TD></TR>
+  <TR>
+    <TD>Id</TD>
+    <TD>cfgId</TD>
+    <TD>This value is incremented automatically.&nbsp; Include a hidden 
+      variable 'cfgId' on your form with this Id to specify the 
+    RecipientRecord.</TD></TR>
+  <TR>
+    <TD>FormName </TD>
+    <TD>&nbsp;</TD>
+    <TD>Enter a friendly name to identify this form. </TD></TR>
+  <TR>
+    <TD>EncryptMethod </TD>
+    <TD>&nbsp;</TD>
+    <TD>Specifies if this form data should be encrypted.&nbsp; </TD></TR>
+  <TR>
+    <TD>EncryptKey </TD>
+    <TD>&nbsp;</TD>
+    <TD>If you specified an encryption type that uses public key cryptography, 
+      this is the public key to use when encrypting.</TD></TR>
+  <TR>
+    <TD>Recipients </TD>
+    <TD>&nbsp;</TD>
+    <TD>Addresses to which the formmail will be sent.&nbsp; (One email address 
+      per line)</TD></TR>
+  <TR>
+    <TD>AttNameLookup </TD>
+    <TD>&nbsp;</TD>
+    <TD>If you specified an encrytion type that is sent as an attachment, a 
+      hidden or visible form field can be used to control the filename of the 
+      attachment. If none specifed, the file will be given a semi-random numeric 
+      name. Suggestion: cfgFrom </TD></TR>
+  <TR>
+    <TD>RequireSSL </TD>
+    <TD>&nbsp;</TD>
+    <TD>If Yes is selected, SimpleSecure will not process the form unless it 
+      is submitted though an SSL connection. Recommended to select Yes as a 
+      precaution if this is a secure form with encryption.</TD></TR>
+  <TR>
+    <TD>DefaultFrom </TD>
+    <TD>cfgFrom</TD>
+    <TD>Email address from which the form submission will be emailed.</TD></TR>
+  <TR>
+    <TD>DefaultSubject </TD>
+    <TD>cfgSubject</TD>
+    <TD>Subject of the form submission email message. Can be overridden with 
+      the hidden form variable 'cfgSubject' </TD></TR>
+  <TR>
+    <TD>DefaultRedirectUrl </TD>
+    <TD>cfgRedirectUrl</TD>
+    <TD>Upon successful submission, the visitor will be redirected to this 
+      page. If not specified, a generic thank-you message will be displayed. 
+  </TD></TR>
+  <TR>
+    <TD>DefaultEmailFormat </TD>
+    <TD>cfgEmailFormat</TD>
+    <TD>If the message is encrypted, it is recommended to use TEXT 
+  format.</TD></TR>
+  <TR>
+    <TD>HtmlTableStyle </TD>
+    <TD>&nbsp;</TD>
+    <TD>If email is HTML format, Enter CSS code here to control the style of 
+      the table. (Use TABLE, TH and TD tags) </TD></TR>
+  <TR>
+    <TD>Auto-Reply</TD>
+    <TD>&nbsp;</TD>
+    <TD>Specify if an auto-reply is sent.  (configured in the Auto-Reply section) </TD></TR>
+  <TR bgcolor="#dddddd">
+    <TD colspan='3'>The fields below are available only on the HTML form:</TD>
+	</tr>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>cfgRequired</TD>
+    <TD>comma-separated list of required form fields. (ex. "Name,Age,Phone")</TD></TR>
+    <TR>
+	<TD>&nbsp;</TD>
+    <TD>cfgSupress</TD>
+    <TD>any non-empty value will tell SimpleSecure to ignore blank fields (fields
+	that the user did not fill out will not be included in the email message).</TD></TR>
+
+</TABLE></P>
+<P>
+
+<hr NOSHADE>
+
+<P></P>
+
+<P></P>
+<P></P>
+
+<P></P>
+<P>© copyright 1997-2004, <a href="http://www.verysimple.com/" target="_blank">verysimple, inc.</a>    </P>
+
+</body>
+
+</html>
