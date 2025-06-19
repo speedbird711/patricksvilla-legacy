@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:10pt;
+	font-family:Ariel;
+      font-weight:bold;
+	color:#000099;
+}
+  </style>
+    <script>
+
+/*
+Cursor Trailor Text- By Peter Gehrig (http://www.24fun.ch/)
+Permission given to Dynamicdrive.com to feature script in it's archive.
+For full source code, installation instructions, and 1000's more DHTML scripts,
+visit http://dynamicdrive.com
+*/
+
+var x,y
+var step=20
+var flag=0
+
+// Your snappy message. Important: the space at the end of the sentence!!!
+var message="PATRICKSVILLA "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+  </script>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <meta name="description" content="orlando vacation homes,orlando
+      villa,Southern Dunes Golf villa,Holiday Home Orlando">
+    <meta name="keywords" content="vacation home rental, green home,
+      schoenes ferienhaus, ferienhaus, cape coral, tolles ferienhaus,
+      orlando ferienhaus, florida ferienhaus, deutsches ferienhaus,
+      deutsche Besitzer, green villa, green rental, environmetal
+      friendly, golf villa, where you are more than just a guest, luxury
+      villa, patricksvilla.com, patricksvilla, disney, southern dunes,
+      golf, orlando, pool, clean pool, environmentally friendly, pool
+      clorinator, salt water, clean, villa, florida vacations, holiday
+      in florida, villa rentals, florida vacation rentals, orlando
+      resort, vacation rentals, florida holidays, universal studios,
+      kissimmee villas, disney world vacation, florida villas, florida
+      vacation rental homes, disney world resort, orlando villa rental,
+      holiday, villa, vacation, villa rental, orlando villa, orlando
+      villas, orlando vacation home, Orlando holiday home, Orlando,
+      holiday villa, golf villa, villa rental, vacation home rental,
+      Vacation Home, disney vacation home, pool villa, orlando, disney,
+      world, kissimmee, house, villa, villas, houses, condos, rent,
+      home, holiday, inn, homes, condo, rental, owner, flat, apartment,
+      america, sea world, disney world, rentals, florida, for, rent,
+      lodging, accomodation, condolodge, condotels, condotel, rental,
+      vacation, by, owner, resort, accommodation, florida, fla, fl, usa,
+      disneyworld, walt, motels, hotels, flordia, lodging, ferienhaus,
+      traumurlaub, urlaub, traum, orlando, urlaub, in florida, bungalow,
+      orlando vacation rentals, florida, Orlando, private pools, private
+      homes, vacation rentals, vacation rental homes, condos, rental
+      homes, short term rentals, holiday, holidays, florida holidays,
+      florida accommodation, Florida accomodation, kissimmee, kissimmee
+      hotels, kissimmee homes, kissimmee rental homes, kissimmee
+      vacation rentals, kissimmee pool homes, kissimmee private pool
+      homes, osceola vacation rentals, osceola county vacation rentals,
+      orange county vacation rentals, lee county, lee county florida,
+      cape coral ferienhaus, cape coral ferienhäuser, cape coral
+      ferienhaeuser, cape coral 8 personen ferienhaus, polk county
+      vacation rentals, villas, villas with pools, florida villas,
+      Florida villas, florida private villas, florida vacation rentals,
+      Florida vacation rental, orlando villas, Orlando villa, orlando
+      private villas, orlando vacation rentals, orlando attractions,
+      attractions, walt disney world, animal kingdon, pleasure island,
+      typhoon lagoon, blizzard beach, river country, disney, universal
+      studios, islands of adventure, city walk, epcot, mgm studios,
+      magic kingdom, sea world, shamu, splendid china, wet and wild,
+      cyprus gardens, water mania, world of orchids, church street
+      station, king henry's feast, medieval, arabian nights, wild bills,
+      pirates dinner show, silver springs, gatorland, bentley, florida
+      golf, florida shopping, florida mall, florida factory outlet, belz
+      outlet mall, ferienhaueser, miethaeuser, urlaub, urlaub in
+      orlando, urlaub bei mickey, disney urlaub, traumurlaub, schoener
+      urlaub, golf urlaub, urlaub am eigenen pool">
+    <meta name="title" content="visit our orlando vacation rental
+      orlando villa Southern Dunes villa golf florida vacation rentals">
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <title>Luxury Vacation Homes with Pool on Southern Dunes Golf and
+      Country Club and Cape Coral, Florida</title>
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=3.0)">
+  </head>
+  <body onload="makesnake()" style="width: 100%; overflow-x: hidden;
+    overflow-y: scroll;" vlink="#000099" text="#ffffff" link="#000099"
+    bgcolor="#000099" alink="#000099">
+    <p align="center"> <b><font face="Comic Sans MS"><font size="7">PatricksVilla.com</font></font></b></p>
+    <div align="center">
+      <center>
+        <table id="AutoNumber1" bordercolorlight="#FFFF00"
+          bordercolordark="#808000" width="1280" cellspacing="5"
+          cellpadding="5" border="5" height="1013">
+          <tbody>
+            <tr>
+              <td style="width: 329px;" colspan="3" rowspan="1"
+                align="center" height="324">
+                <div style="text-align: left;"> </div>
+                <br>
+                <table width="718" cellspacing="2" cellpadding="2"
+                  border="1" bgcolor="#000099" height="256">
+                  <tbody>
+                    <tr>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="middle" align="center"><font size="+2"
+                          face="Arial"><br>
+                          <b><font size="+3"><u>Orlando</u></font></b></font><font
+                          size="+2" color="#000099" face="Arial"><font
+                            color="#ffffff"><br>
+                            -bitte auf die Fotos <b>links</b> klicken-<br>
+                          </font><br>
+                        </font></td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top" align="center"><font size="+2"
+                          face="Arial"><br>
+                          <font color="#ffffff"><b><font size="+3"><u>Cape
+
+
+
+                                  Coral</u></font></b></font><br>
+                          -bitte auf die Fotos <b>rechts</b> klicken-</font></td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top"><a
+                          href="http://www.patricksvilla.com/Deutsch%20index.html"><span
+                            style="text-decoration: underline;"></span></a><a
+                          href="Deutsch%20index.html" target="_self"><img
+                            moz-do-not-send="true"
+                            src="Pictures%201906/PV%2006%202019%202.jpg"
+                            alt="" width="500" border="0" height="306"></a><br>
+                      </td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top"><a href="CCDeutschindex.html"
+                          target="_self"><img moz-do-not-send="true"
+src="CCPhotos/2403%20Photos%202/24%20Mar%20PV%20CC%20outside%20-%201.jpeg"
+                            alt="" width="500" border="0" height="306"></a><br>
+                      </td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top"><a href="Deutsch%20index.html"
+                          target="_self"><img moz-do-not-send="true"
+                            src="Pictures%2023%2004/CC%20Const%20-%204.jpeg"
+                            alt="" width="500" border="0" height="306"></a><br>
+                      </td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top"><a href="CCDeutschindex.html"
+                          target="_self"><img moz-do-not-send="true"
+                            src="CCPhotos/2403%20Photos%202/24%20Mar%20PV%20CC%20-%201.jpeg"
+                            alt="" width="500" border="0" height="306"></a></td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top" bgcolor="#000099" align="center"><font
+                          color="#000099"><font color="#ffffff"><br>
+                            <b>Please click on a flag to continue in
+                              your preferred language</b></font></font><br>
+                        <a href="english%20index.html" target="_self"><img
+                            moz-do-not-send="true" src="greatbrE.gif"
+                            alt="" width="68" border="0" height="50"></a><a
+                          href="english%20index.html" target="_self"><img
+                            moz-do-not-send="true" src="usaCa.gif"
+                            alt="" width="68" border="0" height="50"></a><a
+                          href="english%20index.html" target="_self"><img
+                            moz-do-not-send="true"
+                            src="australC_1xa.gif" alt="" width="68"
+                            border="0" height="50"></a><br>
+                        <a href="Deutsch%20index.html" target="_self"><img
+                            moz-do-not-send="true" src="austriaCe.gif"
+                            alt="" width="68" border="0" height="50"></a><a
+                          href="Deutsch%20index.html" target="_self"><img
+                            moz-do-not-send="true"
+                            src="germanyf2t11x.gif" alt="" width="68"
+                            border="0" height="50"></a><a
+                          href="Deutsch%20index.html" target="_self"><img
+                            moz-do-not-send="true" src="switzerC.gif"
+                            alt="" width="68" border="0" height="50"></a><br>
+                        <a href="swedishindex.html" target="_self"><img
+                            moz-do-not-send="true" src="sweden-flag.gif"
+                            alt="" width="68" border="0" height="50"></a><br>
+                        <br>
+                      </td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                      <td valign="top" bgcolor="#000099" align="center"><br>
+                        <b>Bitte klicken Sie auf eine der Flaggen<br>
+                          <br>
+                        </b> <br>
+                        <a href="CCDeutschindex.html" target="_self"><img
+                            moz-do-not-send="true" src="austriaCe.gif"
+                            alt="" width="68" border="0" height="50"></a><a
+                          href="CCDeutschindex.html" target="_self"><img
+                            moz-do-not-send="true"
+                            src="germanyf2t11x.gif" alt="" width="68"
+                            border="0" height="50"></a><a
+                          href="CCDeutschindex.html" target="_self"><img
+                            moz-do-not-send="true" src="switzerC.gif"
+                            alt="" width="68" border="0" height="50"></a><br>
+                      </td>
+                      <td valign="top" bgcolor="#ffffff"><br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <br>
+                <a href="Deutsch%20index.html"> </a></td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      &nbsp; <noscript>
+</noscript> <br>
+    </div>
+    <p align="center">
+      <script language="JavaScript1.2">/*
+Cross browser Marquee script- © Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and Terms Of Use, visit http://www.dynamicdrive.com
+Credit MUST stay intact
+*/
+
+//Specify the marquee's width (in pixels)
+var marqueewidth="700px"
+//Specify the marquee's height
+var marqueeheight="25px"
+//Specify the marquee's marquee speed (larger is faster 1-10)
+var marqueespeed=3
+//configure background color:
+var marqueebgcolor="#000099"
+//Pause marquee onMousever (0=no. 1=yes)?
+var pauseit=1
+
+//Specify the marquee's content (don't delete <nobr> tag)
+//Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+
+var marqueecontent='<nobr><font face="Ariel">++ Seit 2024 bieten wir Ihnen PatricksVilla in Cape Coral und in Haines City ++ since 2024 PatricksVilla is available in both Cape Coral and Haines City ++</font></nobr>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+marqueespeed=(document.all)? marqueespeed : Math.max(1, marqueespeed-1) //slow speed down by 1 for NS
+var copyspeed=marqueespeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+marqueecontent+'</span>')
+var actualwidth=''
+var cross_marquee, ns_marquee
+
+function populate(){
+if (iedom){
+cross_marquee=document.getElementById? document.getElementById("iemarquee") : document.all.iemarquee
+cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+cross_marquee.innerHTML=marqueecontent
+actualwidth=document.all? temp.offsetWidth : document.getElementById("temp").offsetWidth
+}
+else if (document.layers){
+ns_marquee=document.ns_marquee.document.ns_marquee2
+ns_marquee.left=parseInt(marqueewidth)+8
+ns_marquee.document.write(marqueecontent)
+ns_marquee.document.close()
+actualwidth=ns_marquee.document.width
+}
+lefttime=setInterval("scrollmarquee()",20)
+}
+window.onload=populate
+
+function scrollmarquee(){
+if (iedom){
+if (parseInt(cross_marquee.style.left)>(actualwidth*(-1)+8))
+cross_marquee.style.left=parseInt(cross_marquee.style.left)-copyspeed+"px"
+else
+cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+
+}
+else if (document.layers){
+if (ns_marquee.left>(actualwidth*(-1)+8))
+ns_marquee.left-=copyspeed
+else
+ns_marquee.left=parseInt(marqueewidth)+8
+}
+}
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+marqueewidth+';height:'+marqueeheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+marqueewidth+';height:'+marqueeheight+';background-color:'+marqueebgcolor+'" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">')
+write('<div id="iemarquee" style="position:absolute;left:0px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+marqueewidth+' height='+marqueeheight+' name="ns_marquee" bgColor='+marqueebgcolor+'>')
+write('<layer name="ns_marquee2" left=0 top=0 onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+</script></p>
+    <p align="center">&nbsp;<!-- Start of StatCounter Code -->
+      <script type="text/javascript">
+sc_project=369335; 
+sc_invisible=1; 
+sc_partition=1; 
+sc_security=""; 
+</script>
+      <script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript>
+</noscript></p>
+    <div class="statcounter"><a
+        href="http://www.statcounter.com/free_hit_counter.html"
+        target="_blank"><img class="statcounter"
+          src="http://c2.statcounter.com/369335/0//1/" alt="javascript
+          hit counter"></a></div>
+    <!-- End of StatCounter Code -->
+  </body>
+</html>
